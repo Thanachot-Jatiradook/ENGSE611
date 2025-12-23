@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework - External CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>นายธนโชติ จาติระดุก</h1>
+        <h2>bleh</h2>
+        <p>Welcome to this website.</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#table-section">Table</a></li>
+            <li><a href="#form-section">Form</a></li>
+            <li><a href="#meow">Meow Logic</a></li>
+            <li><a href="#dialyn">Dialyn</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="table-section">
+            <h3>Is this a table? Yes.</h3>
+            <table>
+                <caption>Table of Meow</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Meow Header 1</th>
+                        <th colspan="2">Meow Group</th>
+                        <th rowspan="2">Meow Header 2</th>
+                    </tr>
+                    <tr>
+                        <th>Sub Meow A</th>
+                        <th>Sub Meow B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Meow</td>
+                        <td>Meow</td>
+                        <td>Meow</td>
+                        <td>Meow</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="form-section">
+            <h3>Login Form</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Who are you?</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com">
+                </div>
+                <button type="submit">Nothing happens</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="meow">
+            <h2>What is cat</h2>
+            <p>Cat is <span class="highlight">car</span>.</p>
+        </section>
+
+        <section id="dialyn">
+            <h2>Dialyn Saying somethings</h2>
+            <img src="https://static.wikia.nocookie.net/zenless-zone-zero/images/9/9f/Agent_Dialyn_Portrait.png/revision/latest/scale-to-width-down/268?cb=20251126105302" 
+                 alt="Portrait of Agent Dialyn" 
+                 style="max-width: 268px; height: auto;">
+            <br>
+            <a href="https://www.youtube.com/watch?v=VooDLhzHzuw" target="_blank" rel="noopener noreferrer" class="btn-link">
+                Do not click on it
+            </a>
+
+            <h3>Lyrics</h3>
+            <ul class="lyrics">
+                <li>DunDunDun</li>
+                <li><span class="highlight">Yo phon lingin</span></li>
+                <li>Yo phon lingin</li>
+                <li>Big boi</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Meow Corp.</p>
+    </footer>
+
+</body>
+</html>

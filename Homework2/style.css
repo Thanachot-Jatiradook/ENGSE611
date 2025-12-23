@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1 {
+    color: #006064;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+#main-header {
+    background-color: #ffffff;
+    border: 2px solid #006064;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: yellow;
+    color: red;
+    font-weight: bold; 
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #00838f;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #b2ebf2;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
