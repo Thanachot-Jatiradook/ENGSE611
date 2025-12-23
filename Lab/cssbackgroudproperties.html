@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>properties</title>
+</head>
+<body>
+    <style>
+        .box-color {
+            width: 300px;
+            height: 120px;
+            background-color: lightblue;
+            padding: 20px;
+        }
+        .box-image {
+            width: 300px;
+            height: 300px;
+            background-image: url('../image/osu.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 2px solid #333;
+        }
+        .box-short {
+            width: 300px;
+            height: 300px;
+            background: url('../image/osu.png') no-repeat center / cover;
+            border: 2px solid black;
+        }
+        .bg-yellow {
+            background-color: yellow;
+        }
+        .bg-hex {
+            background-color: #FFFF00;
+        }
+    </style>
+
+    <p class="box-color"></p>
+    <p class="box-image"></p>
+    <p class="box-short"></p>
+    <p class="bg-yellow">Test color</p>
+    <p class="bg-hex">Test hex</p>
+
+</body>
+</html>
