@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .flex-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #f0f0f0;
+            padding: 15px;
+            border: 2px solid #ccc;
+            height: 200px;
+        }
+
+        .item {
+            background: navy;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px ;
+        }
+
+        .stretch .item {
+            background: teal;
+            height: auto;
+        }
+    </style>
+
+    <h1>Column Layout</h1>
+
+    <h2>Justify-content: center</h2>
+    <div class="flex-box" style="justify-content: center;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h2>justify-content: space-between</h2>
+    <div class="flex-box" style="justify-content: space-between;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h2>aligh-items: center</h2>
+    <div class="flex-box" style="align-items: center;">
+        <div class="item" style="width: 60px;">1</div>
+        <div class="item" style="width: 80px;">2</div>
+        <div class="item" style="width: 40px;">3</div>
+    </div>
+
+    <h2>aligh-items: stretch</h2>
+    <div class="flex-box stretch" style="align-items: stretch;">
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+    </div>
+</body>
+</html>

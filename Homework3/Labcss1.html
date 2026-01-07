@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 15px;
+            height : 150px;
+        }
+
+        .item {
+            background: white;
+            color: black;
+            font-size: 20px;
+            width: 300px;
+            text-align: left;
+            padding : 20px;
+            border-radius: 20px;
+            height: 100px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-family: sans-serif;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        body {
+            background: #f0f0f0;
+        }
+
+    </style>
+    <h2>โจทย์ที่ 1 : Crad layout ด้วย flexbox</h2>
+    <div class="flexbox" style="justify-content: flex-start; align-items: center;">
+        <div class="item">
+            <h3>Cat</h3>
+            <p>Cat is car</p>
+        </div>
+        <div class="item">
+            <h3>WYSI</h3>
+            <p>727</p>
+        </div>
+        <div class="item" >
+            <h3>Camellya</h3>
+            <img src="https://preview.redd.it/this-camellya-picture-can-be-used-in-any-situation-v0-sitxhv99e72f1.jpeg?width=1080&format=pjpg&auto=webp&s=b6bf103dc0a817b627c6a3826fcf9ba3e5ad2ac3" alt="" width="40px" >
+        </div>
+    </div>
+</body>
+</html>

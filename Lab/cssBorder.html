@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        .box {
+        width: 200px;
+        padding: 20px;
+        border: 5px solid #0077ff;
+        margin: 20px;
+        background-color: #cce5ff;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px gray;
+        border-style: dotted;
+        }
+
+        /* ตัวอย่างแบบปกติ (content-box) */
+        .content-box {
+        box-sizing: content-box;
+        }
+
+        /* ตัวอย่างแบบ border-box */
+        .border-box {
+        box-sizing: border-box;
+        background-color: #ffd8cc;
+        }
+
+        .border1 {
+            background-color: #0077ff;
+            border: 3px solid rgb(0, 238, 255);
+            margin: 20px;
+            padding: 20px;
+            width: 200px;
+            box-shadow : 10px 10px 5px rgba(0,0,0,0.4); 
+            border-style: double;
+        }
+
+        .border2 {
+            background-color: #0077ff;
+            border: 3px solid rgb(0, 238, 255);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .border3 {
+            background-color: #0077ff;
+            border: 3px solid rgb(0, 238, 255);
+            box-shadow: 0 12px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .border4 {
+            background-color: #0077ff;
+            border: 3px solid rgb(0, 238, 255);
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        .border5 {
+            background-color: #0077ff;
+            border: 3px solid rgb(0, 238, 255);
+            box-shadow : 10px 10px 5px rgba(0,0,0,0.4); 
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Box Model</h2>
+
+    <h3>1 box-sizing: content-box (ค่าปกติ)</h3>
+    <div class="box content-box">
+    ความกว้างที่กำหนด = 200px  
+    (ไม่รวม padding + border)
+    </div>
+
+    <h3>2 box-sizing: border-box</h3>
+    <div class="box border-box">
+    ความกว้างที่กำหนด = 200px  
+    (รวม padding + border อยู่ใน 200px)
+    </div>
+
+    <p class="border1">dsd</p>
+    <p class="border2">dsd</p>
+    <p class="border3">dsd</p>
+    <p class="border4">dsd</p>
+    <p class="border5">dsd</p>
+</body>
+</html>
