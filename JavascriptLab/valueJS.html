@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="runDemo()">Run Code</button>
+
+    <pre id="output"></pre>
+    <script>
+        function runDemo() {
+            console.clear();
+            const output = [];
+
+            let studentName = 'Somchai'
+            let age = 20;
+            let isStudent = true;
+            let aString = 'Hi';
+            const universityName = 'RMUTL'
+
+            output.push("Name : " + studentName);
+            console.log("Name : ", studentName);
+            output.push("Age : " + age);
+            console.log("Age : ", age);
+            console.log('Type of aString:', typeof aString);
+
+            age = 21;
+            output.push("New Age : " + age);
+            console.log("New Age", age);
+
+            try {
+                universityName = 'new university'
+            }
+            catch (e) {
+                output.push("Error : " + e.message);
+                console.error(e.message);
+            }
+
+            document.getElementById("outputBox").textContent = output.join("\n")
+        }
+    </script>
+</body>
+</html>
