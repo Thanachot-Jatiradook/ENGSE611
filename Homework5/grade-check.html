@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Check Assignment</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        #output { 
+            background-color: #f4f4f4; 
+            padding: 15px; 
+            border-radius: 8px; 
+            border-left: 5px solid #333;
+            max-width: 300px;
+        }
+        .pass { color: green; font-weight: bold; }
+        .fail { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>ระบบตรวจผลการเรียน</h2>
+    
+    <div id="output"></div>
+
+    <script>
+        // ข้อ 2 & 6: ประกาศตัวแปร score (ทดลองเปลี่ยนเป็น 45, 62, 79, 88)
+        let score = 88; 
+
+        let grade = "";
+        let status = "";
+
+        // ข้อ 3: ใช้ if / else if / else เพื่อตัดเกรด
+        if (score >= 80) {
+            grade = "A";
+        } else if (score >= 70) {
+            grade = "B";
+        } else if (score >= 60) {
+            grade = "C";
+        } else if (score >= 50) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        // ข้อ 4: เงื่อนไขตรวจสอบ "ผ่าน / ไม่ผ่าน"
+        if (score >= 50) {
+            status = "ผ่าน";
+        } else {
+            status = "ไม่ผ่าน";
+        }
+
+        // เตรียมข้อความสำหรับแสดงผล
+        let resultText = `
+            <p>คะแนนที่ได้: <strong>${score}</strong></p>
+            <p>เกรด: <strong>${grade}</strong></p>
+            <p>ผลสอบ: <span class="${score >= 50 ? 'pass' : 'fail'}">${status}</span></p>
+        `;
+
+        // ข้อ 5: แสดงผลบนหน้าเว็บ (div id="output")
+        document.getElementById("output").innerHTML = resultText;
+
+        // ข้อ 5: แสดงผลใน Console
+        console.log("--- รายงานผลสอบ ---");
+        console.log("คะแนน: " + score);
+        console.log("เกรด: " + grade);
+        console.log("ผลสอบ: " + status);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Practice Assignment</title>
+    <style>
+        body { font-family: sans-serif; padding: 30px; background-color: #f5f5f5; }
+        .display-area { 
+            background-color: #000; color: #0f0; padding: 20px; 
+            border-radius: 10px; font-family: 'Courier New', monospace;
+            max-width: 400px; white-space: pre-wrap; line-height: 1.4;
+        }
+        button { padding: 10px 20px; cursor: pointer; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <h2>แบบฝึกหัดเรื่อง Loop</h2>
+    <button onclick="runLoop()">Run Code</button>
+    <div id="outputDisplay" class="display-area">กดปุ่มเพื่อดูผลลัพธ์...</div>
+
+    <script>
+        function runLoop() {
+            let output = "";
+            let maxNumber = 10; // ข้อ 2: กำหนดค่าสูงสุด
+            
+            console.log("--- เริ่มการทำงาน Loop ---");
+
+            // ข้อ 3: Loop 0 ถึง maxNumber พร้อมเช็คคู่/คี่
+            for (let i = 0; i <= maxNumber; i++) {
+                let type = (i % 2 === 0) ? "(คู่)" : "(คี่)";
+                let line = `${i} ${type}\n`;
+                output += line;
+                console.log(`${i} ${type}`);
+            }
+
+            // ข้อ 5: นับทีละ 2 (0, 2, 4, ...)
+            output += "\nนับทีละ 2: ";
+            console.log("\nนับทีละ 2:");
+            for (let j = 0; j <= maxNumber; j += 2) {
+                output += j + " ";
+                console.log(j);
+            }
+
+            // ข้อ 5: นับถอยหลังจาก 10 -> 0
+            output += "\n\nถอยหลัง: ";
+            console.log("\nนับถอยหลัง:");
+            for (let k = 10; k >= 0; k--) {
+                output += k + " ";
+                console.log(k);
+            }
+
+            // ข้อ 4: แสดงผลบนหน้าเว็บ
+            document.getElementById("outputDisplay").innerText = output;
+        }
+    </script>
+</body>
+</html>
