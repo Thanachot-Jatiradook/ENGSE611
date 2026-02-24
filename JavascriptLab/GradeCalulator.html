@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><b>Put your score here : </b></p>
+
+    <input type="number" id="scoreInput" placeholder="0 - 100">
+
+    <button onclick="runGrade()">Grade Calulate</button><br><br>
+
+    <div id="outputBox">Your result will appear here..</div>
+
+    <script>
+        function calculateGrade(score) {
+            if (score >= 80) {
+                return "A (Pro level)";
+            }
+            else if (score >= 70) {
+                return "B (Normal level)";
+            }
+            else if (score >= 60) {
+                return "C (Normal level)";
+            }
+            else if (score >= 50) {
+                return "D (Normal level)";
+            }
+            else {
+                return "F (Noob level)";
+            }
+        }
+
+        function runGrade() {
+            const output = [];
+            let score = Number(document.getElementById("scoreInput").value);
+
+            if (isNaN(score) || score < 0 || score > 100) {
+                output.push("Please put number between 0 - 100");
+                document.getElementById("outputBox").textContent = output.join("\n");
+                return;
+            }
+
+            let grade = calculateGrade(score);
+
+            output.push("Your score : " + score);
+            output.push("Your grade : " + grade);
+
+            console.log("score : ",score);
+            console.log("grade : ",grade);
+
+            document.getElementById("outputBox").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>

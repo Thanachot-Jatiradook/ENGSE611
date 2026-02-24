@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+
+    <h1 id="header">topic</h1>
+    <p>example list (class = "item") : </p>
+    <ul>
+        <li class="item">list 1</li>
+        <li class="item">list 2</li>
+        <li class="item">list 3</li>
+    </ul>
+
+    <div style="margin-top: 20px; margin-bottom: 10px;">
+        <button onclick="changeTitle()">change text + color topic</button>
+        <button onclick="highlightItems()">all hightlight .item</button>
+        <button onclick="addParagraph()">create & add new text</button>
+    </div>
+
+    <div id="logbox">Log : wait to press button for result</div>
+
+    <script>
+
+        const title = document.getElementById("header");
+        const item = document.querySelectorAll(".item");
+        const logbox = document.getElementById("logbox");
+
+        function log(message) {
+            console.log(message);
+            logbox.textContent += "\n" + message;
+        }
+
+        function changeTitle() {
+            title.textContent = "Topic was change by JavaScript";
+            title.style.color = "red";
+            title.style.fontWeight = "bold";
+            log("Change text and color in #header now!");
+        }
+
+        function highlightItems() {
+            item.forEach((item, index) => {
+                item.classList.add("highlight");
+                item.textContent = "List no " + (index + 1) + " (was highlighted)"
+            });
+            log("add class .highlight in .item for everythings");
+        }
+
+        function addParagraph() {
+            let p = document.createElement("p");
+            p.textContent = "New text from JavaScript at : " + new Date().toLocaleTimeString();
+            document.body.appendChild(p);
+            log("Create new <p> and appendChild with <body>");
+        }
+    </script>
+</body>
+</html>

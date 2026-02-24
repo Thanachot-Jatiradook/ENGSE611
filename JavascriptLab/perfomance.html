@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list-fragment"></ul>
+    <ul id="list-normal"></ul>
+    <button onclick="testloop()">test how fast in loop</button>
+    <button onclick="runtest()">test 2 type of DOM</button>
+
+    <script>
+        function testloop() {
+            console.time("Loop 1M");
+            let sum = 0;
+            for (let i =0; i < 1000000; i++) {
+                sum += i;
+            }
+
+            console.timeEnd("Loop 1M");
+            alert("Can veiw result in Developer Console");
+        }
+
+        function runtest() {
+            const listNormal = document.getElementById("list-normal");
+            const listFragment = document.getElementById("list-fragment");
+
+            listNormal.innerHTML = "";
+            listFragment.innerHTML = "";
+
+            console.time("Normal DOM");
+            for (let i = 0; i < 1000; i++) {
+                const li = document.createElement("li");
+                li.textContent = `Item ${i}`;
+                listNormal.appendChild(li);
+            }
+            console.timeEnd("Normal DOM");
+
+            const fragment = document.createDocumentFragment();
+            console.time("Fragment DOM");
+            for (let i = 0; i < 1000; i++) {
+                const li = document.createElement("li");
+                li.textContent = `Item ${i}`;
+                fragment.appendChild(li);
+            }
+
+            listFragment.appendChild(fragment);
+            console.timeEnd("Fragment DOM");
+
+            alert("Done! view result in Developer Console");
+        }
+    </script>
+</body>
+</html>
